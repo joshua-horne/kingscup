@@ -8,6 +8,7 @@ import {NativeBaseProvider} from 'native-base';
 
 import TitleScreen from './components/TitleScreen';
 import EnterPlayerNamesScreen from './components/EnterPlayerNamesScreen';
+import GameScreen from './components/GameScreen';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
               name="EnterPlayerNames"
               component={EnterPlayerNamesScreen}
             />
+            <Stack.Screen name="GameScreen" component={GameScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </NativeBaseProvider>

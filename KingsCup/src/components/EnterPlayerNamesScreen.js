@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
 import {View, Text} from 'native-base';
 import {TextInput, Button} from 'react-native';
+
 import {useDispatch, useSelector} from 'react-redux';
 import {addPlayerName, removePlayerName} from '../store';
 
-const EnterPlayerNamesScreen = () => {
+const EnterPlayerNamesScreen = ({navigation}) => {
   const [newPlayerName, setNewPlayerName] = useState('');
   const dispatch = useDispatch();
   const playerNames = useSelector(state => state.playerNames);
 
   const handleSubmit = () => {
     // Submit the form data and navigate to the next screen
+    navigation.navigate('GameScreen');
   };
 
   const handleAddPlayerName = () => {
