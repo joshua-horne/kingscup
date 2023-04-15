@@ -12,7 +12,7 @@ const EnterPlayerNamesScreen = ({navigation}) => {
 
   const handleSubmit = () => {
     // Submit the form data and navigate to the next screen
-    navigation.navigate('GameScreen');
+    navigation.navigate('Game');
   };
 
   const handleAddPlayerName = () => {

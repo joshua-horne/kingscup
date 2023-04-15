@@ -31,6 +31,7 @@ const GameScreen = ({navigation}) => {
     if (deckId) {
       drawCard();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deckId]);
 
   const drawCard = () => {
@@ -49,7 +50,7 @@ const GameScreen = ({navigation}) => {
           setKingsDrawn(kingsDrawn + 1);
           if (kingsDrawn + 1 === 4) {
             console.log('Game Over!');
-            navigation.navigate('EnterPlayerNames');
+            navigation.navigate('GameOver');
           }
         }
       })

@@ -9,6 +9,7 @@ import {NativeBaseProvider} from 'native-base';
 import TitleScreen from './components/TitleScreen';
 import EnterPlayerNamesScreen from './components/EnterPlayerNamesScreen';
 import GameScreen from './components/GameScreen';
+import GameOverScreen from './components/GameOverScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,12 +19,13 @@ export default function App() {
       <NativeBaseProvider>
         <NavigationContainer>
           <Stack.Navigator>
-            <Stack.Screen name="TitleScreen" component={TitleScreen} />
+            <Stack.Screen name="Title" component={TitleScreen} />
             <Stack.Screen
               name="EnterPlayerNames"
               component={EnterPlayerNamesScreen}
             />
-            <Stack.Screen name="GameScreen" component={GameScreen} />
+            <Stack.Screen name="Game" component={GameScreen} />
+            <Stack.Screen name="GameOver" component={GameOverScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </NativeBaseProvider>
