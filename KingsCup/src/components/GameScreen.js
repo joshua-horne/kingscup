@@ -8,6 +8,7 @@ const GameScreen = () => {
   const [deckId, setDeckId] = useState('');
   const [currentCard, setCurrentCard] = useState({});
   const [remainingCards, setRemainingCards] = useState(0);
+  const [kingsDrawn, setKingsDrawn] = useState(0);
   const playerNames = useSelector(state => state.playerNames);
 
   useEffect(() => {
@@ -28,6 +29,9 @@ const GameScreen = () => {
         const card = response.data.cards[0];
         setCurrentCard(card);
         setRemainingCards(response.data.remaining);
+        if (card.value === 'KING') {
+          setKingsDrawn(kingsDrawn + 1);
+        }
       })
       .catch(error => {
         console.log(error);
@@ -52,6 +56,7 @@ const GameScreen = () => {
         Card: {currentCard.value} of {currentCard.suit}
       </Text>
       <Text>Remaining cards in deck: {remainingCards}</Text>
+      <Text>Kings drawn: {kingsDrawn}</Text>
       <Text>
         Next player: {playerNames[(activePlayerIndex + 1) % playerNames.length]}
       </Text>
