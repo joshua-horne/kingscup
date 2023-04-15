@@ -3,7 +3,7 @@ import {View, Text, Button, Image} from 'react-native';
 import {useSelector} from 'react-redux';
 import axios from 'axios';
 
-const GameScreen = () => {
+const GameScreen = ({navigation}) => {
   const [activePlayerIndex, setActivePlayerIndex] = useState(0);
   const [deckId, setDeckId] = useState('');
   const [currentCard, setCurrentCard] = useState({});
@@ -13,16 +13,32 @@ const GameScreen = () => {
 
   useEffect(() => {
     const fetchDeck = async () => {
-      const response = await axios.get(
-        'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1',
-      );
-      setDeckId(response.data.deck_id);
-      setRemainingCards(response.data.remaining);
+      try {
+        const response = await axios.get(
+          'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1',
+        );
+        setDeckId(response.data.deck_id);
+        console.log('deck id: ', response.data.deck_id);
+        setRemainingCards(response.data.remaining);
+      } catch (error) {
+        console.log(error);
+      }
     };
     fetchDeck();
   }, []);
 
+  useEffect(() => {
+    if (deckId) {
+      drawCard();
+    }
+  }, [deckId]);
+
   const drawCard = () => {
+    if (!deckId) {
+      console.log('deck id not set yet.');
+      return;
+    }
+    console.log('request for deck: ', deckId);
     axios
       .get(`https://deckofcardsapi.com/api/deck/${deckId}/draw/?count=1`)
       .then(response => {
@@ -31,6 +47,10 @@ const GameScreen = () => {
         setRemainingCards(response.data.remaining);
         if (card.value === 'KING') {
           setKingsDrawn(kingsDrawn + 1);
+          if (kingsDrawn + 1 === 4) {
+            console.log('Game Over!');
+            navigation.navigate('EnterPlayerNames');
+          }
         }
       })
       .catch(error => {
