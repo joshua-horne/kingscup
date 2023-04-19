@@ -11,7 +11,6 @@ const EnterPlayerNamesScreen = ({navigation}) => {
   const playerNames = useSelector(state => state.playerNames);
 
   const handleSubmit = () => {
-    // Submit the form data and navigate to the next screen
     navigation.navigate('Game');
   };
 
