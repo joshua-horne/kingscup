@@ -7,7 +7,7 @@ import deckOfCards from '../data/deckData';
 
 const GameScreen = ({navigation}) => {
   const [activePlayerIndex, setActivePlayerIndex] = useState(0);
-  const [deck, setDeck] = useState(shuffle(deckOfCards));
+  const [deck] = useState(shuffle(deckOfCards));
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [kingsDrawn, setKingsDrawn] = useState(0);
   const [currentCard, setCurrentCard] = useState(deck[currentCardIndex]);
@@ -22,7 +22,7 @@ const GameScreen = ({navigation}) => {
 
     if (nextCard.value === 'KING') {
       setKingsDrawn(kingsDrawn + 1);
-      if (kingsDrawn + 1 === 4) {
+      if (kingsDrawn === 3) {
         navigation.navigate('GameOver');
       }
     }
