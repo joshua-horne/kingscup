@@ -10,7 +10,6 @@ import TitleScreen from './components/TitleScreen';
 import EnterPlayerNamesScreen from './components/EnterPlayerNamesScreen';
 import GameScreen from './components/GameScreen';
 import GameOverScreen from './components/GameOverScreen';
-import ImageCheck from './components/ImageCheck';
 
 const Stack = createStackNavigator();
 
@@ -21,7 +20,6 @@ export default function App() {
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen name="Title" component={TitleScreen} />
-            <Stack.Screen name="ImageCheck" component={ImageCheck} />
             <Stack.Screen
               name="EnterPlayerNames"
               component={EnterPlayerNamesScreen}

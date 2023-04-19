@@ -10,17 +10,14 @@ const GameScreen = ({navigation}) => {
   const [deck, setDeck] = useState(shuffle(deckOfCards));
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [kingsDrawn, setKingsDrawn] = useState(0);
-  const [currentCard, setCurrentCard] = useState(deck[currentCardIndex]);
 
   const playerNames = useSelector(state => state.playerNames);
 
   const drawCard = () => {
-    const nextCardIndex = currentCardIndex + 1;
-    const nextCard = deck[nextCardIndex];
-    setCurrentCardIndex(nextCardIndex);
-    setCurrentCard(nextCard);
+    const currentCard = deck[currentCardIndex];
+    setCurrentCardIndex(currentCardIndex + 1);
 
-    if (nextCard.value === 'KING') {
+    if (currentCard.value === 'KING') {
       setKingsDrawn(kingsDrawn + 1);
       if (kingsDrawn + 1 === 4) {
         navigation.navigate('GameOver');
@@ -36,15 +33,9 @@ const GameScreen = ({navigation}) => {
   return (
     <View>
       <Text>Current Player: {playerNames[activePlayerIndex]}</Text>
-      <View style={{width: 150, height: 250}}>
-        <Image
-          source={currentCard.image}
-          resizeMode="contain"
-          style={{flex: 1, width: undefined, height: undefined}}
-        />
-      </View>
+      <Image source={{uri: deck[currentCardIndex].image}} />
       <Text>
-        Card: {currentCard.value} of {currentCard.suit}
+        Card: {deck[currentCardIndex].value} of {deck[currentCardIndex].suit}
       </Text>
       <Text>Kings drawn: {kingsDrawn}</Text>
       <Text>
