@@ -5,6 +5,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Ace of Hearts',
     image: require('../../lib/AH.png'),
+    effectTitle: 'Waterfall',
+    effectDescription:
+      'Everyone playing must start drinking. The person who drew this card can stop when they want to, everyone else must wait until the player on their right has finished',
   },
   {
     id: '2H',
@@ -12,6 +15,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Two of Hearts',
     image: require('../../lib/2H.png'),
+    effectTitle: 'You',
+    effectDescription:
+      'Two for you. The player who drew this card can nominate two drinks. Either two drinks to a single player, or one drink each to two players',
   },
   {
     id: '3H',
@@ -19,6 +25,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Three of Hearts',
     image: require('../../lib/3H.png'),
+    effectTitle: 'Me',
+    effectDescription:
+      'Three for me. The player who drew this card must take 3 drinks',
   },
   {
     id: '4H',
@@ -26,6 +35,8 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Four of Hearts',
     image: require('../../lib/4H.png'),
+    effectTitle: 'Whores',
+    effectDescription: 'All female players must take a drink',
   },
   {
     id: '5H',
@@ -33,6 +44,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Five of Hearts',
     image: require('../../lib/5H.png'),
+    effectTitle: 'House Rules',
+    effectDescription:
+      'Use this card however you like. For example: Game Card - The player who drew this card will choose a quick game for the group to play, such as a round of "Never Have I Ever..."',
   },
   {
     id: '6H',
@@ -40,6 +54,8 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Six of Hearts',
     image: require('../../lib/6H.png'),
+    effectTitle: 'Dicks',
+    effectDescription: 'All male players must drink',
   },
   {
     id: '7H',
@@ -47,6 +63,8 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Seven of Hearts',
     image: require('../../lib/7H.png'),
+    effectTitle: 'Heaven',
+    effectDescription: 'The last player to point up must drink',
   },
   {
     id: '8H',
@@ -54,6 +72,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Eight of Hearts',
     image: require('../../lib/8H.png'),
+    effectTitle: 'Mate',
+    effectDescription:
+      'The player who drew this card will choose a mate. When the player drinks, so does their mate and vice versa. You may create a chain of mates',
   },
   {
     id: '9H',
@@ -61,6 +82,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Nine of Hearts',
     image: require('../../lib/9H.png'),
+    effectTitle: 'Rhyme',
+    effectDescription:
+      'Bust a rhyme. The player who drew this card will say a sentence and the person to their left will continue with a sentence that rhymes. Whoever takes too long or repeats a rhyme loses the game and must take a drink',
   },
   {
     id: '10H',
@@ -68,6 +92,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Ten of Hearts',
     image: require('../../lib/10H.png'),
+    effectTitle: 'Categories',
+    effectDescription:
+      'The player who drew this card will name a category and an example. Moving clockwise, players will continue naming examples from the category until either a player cannot name anything or repeats an example',
   },
   {
     id: 'JH',
@@ -75,6 +102,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Jack of Hearts',
     image: require('../../lib/JH.png'),
+    effectTitle: 'New Rule',
+    effectDescription:
+      'The player who drew this card can create their own rule which is active until a new Jack is drawn, or the game finishes',
   },
   {
     id: 'QH',
@@ -82,6 +112,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'Queen of Hearts',
     image: require('../../lib/QH.png'),
+    effectTitle: 'Question Master',
+    effectDescription:
+      'The player who drew this card is the Question Master. Anyone who answers a question from the Question Master must drink. If the response is "Fuck you Question Master", then the Question Master must drink. There may only be one active Question Master at a time',
   },
   {
     id: 'KH',
@@ -89,6 +122,9 @@ const deckOfCards = [
     suit: 'hearts',
     name: 'King of Hearts',
     image: require('../../lib/KH.png'),
+    effectTitle: 'The Kings Cup',
+    effectDescription:
+      'The player who drew this must donate some of their drink to the Kings Cup. Whoever draws the fourth King will finish the Kings Cup and also the game',
   },
   {
     id: 'AD',
@@ -96,6 +132,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Ace of Diamonds',
     image: require('../../lib/AD.png'),
+    effectTitle: 'Waterfall',
+    effectDescription:
+      'Everyone playing must start drinking. The person who drew this card can stop when they want to, everyone else must wait until the player on their right has finished',
   },
   {
     id: '2D',
@@ -103,6 +142,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Two of Diamonds',
     image: require('../../lib/2D.png'),
+    effectTitle: 'You',
+    effectDescription:
+      'Two for you. The player who drew this card can nominate two drinks. Either two drinks to a single player, or one drink each to two players',
   },
   {
     id: '3D',
@@ -110,6 +152,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Three of Diamonds',
     image: require('../../lib/3D.png'),
+    effectTitle: 'Me',
+    effectDescription:
+      'Three for me. The player who drew this card must take 3 drinks',
   },
   {
     id: '4D',
@@ -117,6 +162,8 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Four of Diamonds',
     image: require('../../lib/4D.png'),
+    effectTitle: 'Whores',
+    effectDescription: 'All female players must take a drink',
   },
   {
     id: '5D',
@@ -124,6 +171,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Five of Diamonds',
     image: require('../../lib/5D.png'),
+    effectTitle: 'House Rules',
+    effectDescription:
+      'Use this card however you like. For example: Game Card - The player who drew this card will choose a quick game for the group to play, such as a round of "Never Have I Ever..."',
   },
   {
     id: '6D',
@@ -131,6 +181,8 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Six of Diamonds',
     image: require('../../lib/6D.png'),
+    effectTitle: 'Dicks',
+    effectDescription: 'All male players must drink',
   },
   {
     id: '7D',
@@ -138,6 +190,8 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Seven of Diamonds',
     image: require('../../lib/7D.png'),
+    effectTitle: 'Heaven',
+    effectDescription: 'The last player to point up must drink',
   },
   {
     id: '8D',
@@ -145,6 +199,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Eight of Diamonds',
     image: require('../../lib/8D.png'),
+    effectTitle: 'Mate',
+    effectDescription:
+      'The player who drew this card will choose a mate. When the player drinks, so does their mate and vice versa. You may create a chain of mates',
   },
   {
     id: '9D',
@@ -152,6 +209,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Nine of Diamonds',
     image: require('../../lib/9D.png'),
+    effectTitle: 'Rhyme',
+    effectDescription:
+      'Bust a rhyme. The player who drew this card will say a sentence and the person to their left will continue with a sentence that rhymes. Whoever takes too long or repeats a rhyme loses the game and must take a drink',
   },
   {
     id: '10D',
@@ -159,6 +219,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Ten of Diamonds',
     image: require('../../lib/10D.png'),
+    effectTitle: 'Categories',
+    effectDescription:
+      'The player who drew this card will name a category and an example. Moving clockwise, players will continue naming examples from the category until either a player cannot name anything or repeats an example',
   },
   {
     id: 'JD',
@@ -166,6 +229,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Jack of Diamonds',
     image: require('../../lib/JD.png'),
+    effectTitle: 'New Rule',
+    effectDescription:
+      'The player who drew this card can create their own rule which is active until a new Jack is drawn, or the game finishes',
   },
   {
     id: 'QD',
@@ -173,6 +239,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'Queen of Diamonds',
     image: require('../../lib/QD.png'),
+    effectTitle: 'Question Master',
+    effectDescription:
+      'The player who drew this card is the Question Master. Anyone who answers a question from the Question Master must drink. If the response is "Fuck you Question Master", then the Question Master must drink. There may only be one active Question Master at a time',
   },
   {
     id: 'KD',
@@ -180,6 +249,9 @@ const deckOfCards = [
     suit: 'diamonds',
     name: 'King of Diamonds',
     image: require('../../lib/KD.png'),
+    effectTitle: 'The Kings Cup',
+    effectDescription:
+      'The player who drew this must donate some of their drink to the Kings Cup. Whoever draws the fourth King will finish the Kings Cup and also the game',
   },
   {
     id: 'AC',
@@ -187,6 +259,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Ace of Clubs',
     image: require('../../lib/AC.png'),
+    effectTitle: 'Waterfall',
+    effectDescription:
+      'Everyone playing must start drinking. The person who drew this card can stop when they want to, everyone else must wait until the player on their right has finished',
   },
   {
     id: '2C',
@@ -194,6 +269,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Two of Clubs',
     image: require('../../lib/2C.png'),
+    effectTitle: 'You',
+    effectDescription:
+      'Two for you. The player who drew this card can nominate two drinks. Either two drinks to a single player, or one drink each to two players',
   },
   {
     id: '3C',
@@ -201,6 +279,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Three of Clubs',
     image: require('../../lib/3C.png'),
+    effectTitle: 'Me',
+    effectDescription:
+      'Three for me. The player who drew this card must take 3 drinks',
   },
   {
     id: '4C',
@@ -208,6 +289,8 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Four of Clubs',
     image: require('../../lib/4C.png'),
+    effectTitle: 'Whores',
+    effectDescription: 'All female players must take a drink',
   },
   {
     id: '5C',
@@ -215,6 +298,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Five of Clubs',
     image: require('../../lib/5C.png'),
+    effectTitle: 'House Rules',
+    effectDescription:
+      'Use this card however you like. For example: Game Card - The player who drew this card will choose a quick game for the group to play, such as a round of "Never Have I Ever..."',
   },
   {
     id: '6C',
@@ -222,6 +308,8 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Six of Clubs',
     image: require('../../lib/6C.png'),
+    effectTitle: 'Dicks',
+    effectDescription: 'All male players must drink',
   },
   {
     id: '7C',
@@ -229,6 +317,8 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Seven of Clubs',
     image: require('../../lib/7C.png'),
+    effectTitle: 'Heaven',
+    effectDescription: 'The last player to point up must drink',
   },
   {
     id: '8C',
@@ -236,6 +326,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Eight of Clubs',
     image: require('../../lib/8C.png'),
+    effectTitle: 'Mate',
+    effectDescription:
+      'The player who drew this card will choose a mate. When the player drinks, so does their mate and vice versa. You may create a chain of mates',
   },
   {
     id: '9C',
@@ -243,6 +336,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Nine of Clubs',
     image: require('../../lib/9C.png'),
+    effectTitle: 'Rhyme',
+    effectDescription:
+      'Bust a rhyme. The player who drew this card will say a sentence and the person to their left will continue with a sentence that rhymes. Whoever takes too long or repeats a rhyme loses the game and must take a drink',
   },
   {
     id: '10C',
@@ -250,6 +346,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Ten of Clubs',
     image: require('../../lib/10C.png'),
+    effectTitle: 'Categories',
+    effectDescription:
+      'The player who drew this card will name a category and an example. Moving clockwise, players will continue naming examples from the category until either a player cannot name anything or repeats an example',
   },
   {
     id: 'JC',
@@ -257,6 +356,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Jack of Clubs',
     image: require('../../lib/JC.png'),
+    effectTitle: 'New Rule',
+    effectDescription:
+      'The player who drew this card can create their own rule which is active until a new Jack is drawn, or the game finishes',
   },
   {
     id: 'QC',
@@ -264,6 +366,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'Queen of Clubs',
     image: require('../../lib/QC.png'),
+    effectTitle: 'Question Master',
+    effectDescription:
+      'The player who drew this card is the Question Master. Anyone who answers a question from the Question Master must drink. If the response is "Fuck you Question Master", then the Question Master must drink. There may only be one active Question Master at a time',
   },
   {
     id: 'KC',
@@ -271,6 +376,9 @@ const deckOfCards = [
     suit: 'clubs',
     name: 'King of Clubs',
     image: require('../../lib/KC.png'),
+    effectTitle: 'The Kings Cup',
+    effectDescription:
+      'The player who drew this must donate some of their drink to the Kings Cup. Whoever draws the fourth King will finish the Kings Cup and also the game',
   },
   {
     id: 'AS',
@@ -278,6 +386,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Ace of Spades',
     image: require('../../lib/AS.png'),
+    effectTitle: 'Waterfall',
+    effectDescription:
+      'Everyone playing must start drinking. The person who drew this card can stop when they want to, everyone else must wait until the player on their right has finished',
   },
   {
     id: '2S',
@@ -285,6 +396,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Two of Spades',
     image: require('../../lib/2S.png'),
+    effectTitle: 'You',
+    effectDescription:
+      'Two for you. The player who drew this card can nominate two drinks. Either two drinks to a single player, or one drink each to two players',
   },
   {
     id: '3S',
@@ -292,6 +406,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Three of Spades',
     image: require('../../lib/3S.png'),
+    effectTitle: 'Me',
+    effectDescription:
+      'Three for me. The player who drew this card must take 3 drinks',
   },
   {
     id: '4S',
@@ -299,6 +416,8 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Four of Spades',
     image: require('../../lib/4S.png'),
+    effectTitle: 'Whores',
+    effectDescription: 'All female players must take a drink',
   },
   {
     id: '5S',
@@ -306,6 +425,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Five of Spades',
     image: require('../../lib/5S.png'),
+    effectTitle: 'House Rules',
+    effectDescription:
+      'Use this card however you like. For example: Game Card - The player who drew this card will choose a quick game for the group to play, such as a round of "Never Have I Ever..."',
   },
   {
     id: '6S',
@@ -313,6 +435,8 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Six of Spades',
     image: require('../../lib/6S.png'),
+    effectTitle: 'Dicks',
+    effectDescription: 'All male players must drink',
   },
   {
     id: '7S',
@@ -320,6 +444,8 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Seven of Spades',
     image: require('../../lib/7S.png'),
+    effectTitle: 'Heaven',
+    effectDescription: 'The last player to point up must drink',
   },
   {
     id: '8S',
@@ -327,6 +453,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Eight of Spades',
     image: require('../../lib/8S.png'),
+    effectTitle: 'Mate',
+    effectDescription:
+      'The player who drew this card will choose a mate. When the player drinks, so does their mate and vice versa. You may create a chain of mates',
   },
   {
     id: '9S',
@@ -334,6 +463,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Nine of Spades',
     image: require('../../lib/9S.png'),
+    effectTitle: 'Rhyme',
+    effectDescription:
+      'Bust a rhyme. The player who drew this card will say a sentence and the person to their left will continue with a sentence that rhymes. Whoever takes too long or repeats a rhyme loses the game and must take a drink',
   },
   {
     id: '10S',
@@ -341,6 +473,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Ten of Spades',
     image: require('../../lib/10S.png'),
+    effectTitle: 'Categories',
+    effectDescription:
+      'The player who drew this card will name a category and an example. Moving clockwise, players will continue naming examples from the category until either a player cannot name anything or repeats an example',
   },
   {
     id: 'JS',
@@ -348,6 +483,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Jack of Spades',
     image: require('../../lib/JS.png'),
+    effectTitle: 'New Rule',
+    effectDescription:
+      'The player who drew this card can create their own rule which is active until a new Jack is drawn, or the game finishes',
   },
   {
     id: 'QS',
@@ -355,6 +493,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'Queen of Spades',
     image: require('../../lib/QS.png'),
+    effectTitle: 'Question Master',
+    effectDescription:
+      'The player who drew this card is the Question Master. Anyone who answers a question from the Question Master must drink. If the response is "Fuck you Question Master", then the Question Master must drink. There may only be one active Question Master at a time',
   },
   {
     id: 'KS',
@@ -362,6 +503,9 @@ const deckOfCards = [
     suit: 'spades',
     name: 'King of Spades',
     image: require('../../lib/KS.png'),
+    effectTitle: 'The Kings Cup',
+    effectDescription:
+      'The player who drew this must donate some of their drink to the Kings Cup. Whoever draws the fourth King will finish the Kings Cup and also the game',
   },
 ];
 
