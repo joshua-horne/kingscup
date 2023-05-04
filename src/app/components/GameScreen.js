@@ -46,6 +46,9 @@ const GameScreen = ({navigation}) => {
       <Text>
         Card: {currentCard.value} of {currentCard.suit}
       </Text>
+      <Text>
+        Effect: {currentCard.effectTitle} - {currentCard.effectDescription}
+      </Text>
       <Text>Kings drawn: {kingsDrawn}</Text>
       <Text>
         Next player: {playerNames[(activePlayerIndex + 1) % playerNames.length]}
