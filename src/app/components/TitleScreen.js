@@ -3,8 +3,11 @@ import {Box, Heading, Button, Image} from 'native-base';
 
 const TitleScreen = ({navigation}) => {
   const startGame = () => {
+    console.log('Start game button pressed');
     navigation.navigate('EnterPlayerNames');
   };
+
+  console.log('Title screen rendered');
 
   return (
     <Box
