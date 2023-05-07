@@ -6,6 +6,7 @@ import {
   CloseIcon,
   Input,
   KeyboardAvoidingView,
+  ScrollView,
 } from 'native-base';
 import {useDispatch, useSelector} from 'react-redux';
 import {addPlayerName, removePlayerName} from '../store';
@@ -30,34 +31,35 @@ const EnterPlayerNamesScreen = ({navigation}) => {
 
   const renderPlayerNames = () => {
     return (
-      <Box flexDirection="row" flexWrap="wrap" mt={2}>
-        {playerNames.map(name => (
-          <Box
-            key={name}
-            bg="coolGray.700"
-            borderRadius={4}
-            p={2}
-            mr={2}
-            mb={2}
-            flexDirection="row"
-            alignItems="center">
-            <Text color="coolGray.50" fontSize={16} mr={2}>
-              {name}
-            </Text>
-            <CloseIcon
-              size={4}
-              color="coolGray.50"
-              onPress={() => handleRemovePlayerName(name)}
-            />
-          </Box>
-        ))}
-      </Box>
+      <ScrollView flex={1}>
+        <Box flexDirection="row" flexWrap="wrap" mt={2}>
+          {playerNames.map(name => (
+            <Box
+              key={name}
+              bg="coolGray.700"
+              borderRadius={4}
+              p={2}
+              mr={2}
+              mb={2}
+              flexDirection="row"
+              alignItems="center">
+              <Text color="coolGray.50" fontSize={16} mr={2}>
+                {name}
+              </Text>
+              <CloseIcon
+                size={4}
+                color="coolGray.50"
+                onPress={() => handleRemovePlayerName(name)}
+              />
+            </Box>
+          ))}
+        </Box>
+      </ScrollView>
     );
   };
 
   return (
     <KeyboardAvoidingView
-      style={{flex: 1}}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <Box
         bg="red.800"

@@ -74,11 +74,11 @@ const GameScreen = ({navigation}) => {
         justifyContent="space-between">
         <Box w={150} h={250} flex={1} justifyContent="center">
           <Image
+            flex={1}
             alt="Card"
             key={gameState.currentCardIndex}
             source={gameState.currentCard.image}
             resizeMode="contain"
-            style={{flex: 1, width: undefined, height: undefined}}
           />
         </Box>
       </Flex>
